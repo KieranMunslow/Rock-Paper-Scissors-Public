@@ -7,9 +7,15 @@ router.route(`/`)
         res.send(`aaaaaaa`);
     })
     .post((req, res) => {
-        const choiceNum = Math.floor(Math.random() * 3);
-        const choices = [parseInt(req.body.choice), choiceNum];
-        const resultNum = Math.abs(parseInt(req.body.choice) - choiceNum);
+        // const choice2 = Math.floor(Math.random() * 3);
+        let choice2 = 0;
+        if (req.body?.choice2) {
+            choice2 = req.body.choice2;
+        } else {
+            choice2 = Math.floor(Math.random() * 3);
+        }
+        const choices = [parseInt(req.body.choice), choice2];
+        const resultNum = Math.abs(parseInt(req.body.choice) - choice2);
         var resultWord = "";
         var choiceWord = "";
 
@@ -25,7 +31,7 @@ router.route(`/`)
                 break;
         }
 
-        switch (choiceNum) {
+        switch (choice2) {
             case (0):
                 choiceWord = "rock";
                 break;

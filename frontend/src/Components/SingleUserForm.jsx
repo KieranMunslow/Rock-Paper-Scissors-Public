@@ -30,7 +30,6 @@ const SingleUserForm = props => {
                 setChoiceWord("scissors");
                 break;
         }
-        console.log(choiceWord);
 
         axios.post(`http://localhost:4000/game`, { "choice": choice })
             .then((response) => {
@@ -52,7 +51,8 @@ const SingleUserForm = props => {
                     player1Choice: choiceWord,
                     player2: 'Computer',
                     player2Choice: compChoice,
-                    result: result
+                    result: result,
+                    from: props.location.pathname
                 }
             }}
             />}

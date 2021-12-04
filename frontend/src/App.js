@@ -20,9 +20,9 @@ function App() {
           </Route> */}
           <Route path="/SinglePlayer" component={SingleUserForm} />
 
-          <Route path="/Multiplayer">
-            <MultiUserForm />
-          </Route>
+          <Route path="/Multiplayer" component={MultiUserForm} />
+          {/* <MultiUserForm />
+          </Route> */}
 
           <Route path="/Game" component={Game} />
           {/* <Game />
