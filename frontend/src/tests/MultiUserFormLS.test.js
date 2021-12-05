@@ -1,5 +1,5 @@
 import MultiUserFormLS from "../Components/MultiUserFormLS";
-import { cleanup, render, screen } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import userEvent from '@testing-library/user-event';
 
 describe(`Tests for the multiplayer user forms`, () => {

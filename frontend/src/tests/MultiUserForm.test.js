@@ -156,7 +156,7 @@ describe(`Tests for the multiplayer user forms`, () => {
             test(`Test that the submit button becomes enabled`, () => {
                 const buttons = screen.getAllByText('Submit');
                 expect(buttons[0]).toBeDisabled();
-                expect(buttons[1]).not.toBeDisabled();
+                expect(buttons[1]).not.toBeDisabled
             });
         });
     });

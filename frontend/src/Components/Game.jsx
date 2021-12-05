@@ -18,7 +18,6 @@ const Game = props => {
     return (
         <>
             <p>{player1} chose {player1Choice} and {player2} chose {player2Choice}</p>
-            {/* <h1>You {result}!</h1> */}
             {resultTitle}
             <Link to={{
                 pathname: from,
