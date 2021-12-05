@@ -3,11 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 router.route(`/`)
-    .get((req, res) => {
-        res.send(`aaaaaaa`);
-    })
     .post((req, res) => {
-        // const choice2 = Math.floor(Math.random() * 3);
+
         let choice2 = 0;
         if (req.body?.choice2) {
             choice2 = req.body.choice2;
@@ -15,13 +12,12 @@ router.route(`/`)
             choice2 = Math.floor(Math.random() * 5);
         }
         const choices = [parseInt(req.body.choice), choice2];
-        // const resultNum = ((Math.abs((parseInt(req.body.choice) - choice2))) % 5);
+
         const resultNum = ((((parseInt(req.body.choice) - choice2) % 5) + 5) % 5);
+
         var resultWord = "";
         var choiceWord = "";
-        console.log("UserNum:" + req.body.choice);
-        console.log("ChoiceNum:" + choice2);
-        console.log("ResultNum:" + resultNum);
+
         switch (resultNum) {
             case (0):
                 resultWord = "draw";
@@ -52,7 +48,7 @@ router.route(`/`)
             case (1):
                 choiceWord = "lizard";
         }
-        console.log(choiceWord + resultWord);
+
         res.send({ "choice": choiceWord, "result": resultWord });
     })
 

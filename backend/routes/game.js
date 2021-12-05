@@ -3,11 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.route(`/`)
-    .get((req, res) => {
-        res.send(`aaaaaaa`);
-    })
     .post((req, res) => {
-        // const choice2 = Math.floor(Math.random() * 3);
         let choice2 = 0;
         if (req.body?.choice2) {
             choice2 = req.body.choice2;
