@@ -11,7 +11,7 @@ const SingleUserFormLS = props => {
     const [result, setResult] = useState('');
 
     useEffect(() => {
-        if (props.location.state) {
+        if (props.location?.state) {
             setUserName(props.location.state.name);
         }
     }, []);
