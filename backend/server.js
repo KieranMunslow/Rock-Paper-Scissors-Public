@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require(`express`);
 const index = require('./routes/index.js');
 const game = require('./routes/game.js');
+const gameLS = require('./routes/gameLS');
 
 const app = express();
 const port = process.env.PORT;
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(`/`, index);
 app.use(`/game`, game);
+app.use(`/gameLS`, gameLS);
 
 const server = app.listen(port, host, () => {
     const SERVERHOST = server.address().address;

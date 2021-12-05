@@ -6,6 +6,8 @@ import NavMenu from './Components/NavMenu';
 import SingleUserForm from './Components/SingleUserForm';
 import MultiUserForm from './Components/MultiUserForm';
 import Game from './Components/Game';
+import SingleUserFormLS from './Components/SingleUserFormLS';
+import MultiUserFormLS from './Components/MultiUserFormLS';
 
 function App() {
   return (
@@ -19,8 +21,9 @@ function App() {
             <SingleUserForm />
           </Route> */}
           <Route path="/SinglePlayer" component={SingleUserForm} />
-
+          <Route path="/SinglePlayerLS" component={SingleUserFormLS} />
           <Route path="/Multiplayer" component={MultiUserForm} />
+          <Route path="/MultiplayerLS" component={MultiUserFormLS} />
           {/* <MultiUserForm />
           </Route> */}
 

@@ -13,6 +13,11 @@ const NavMenu = () => {
                         <Nav.Link href="/Multiplayer">Two Player</Nav.Link>
                         {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
                     </Nav>
+                    <Navbar.Brand href="/">Lizard Spock</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/SinglePlayerLS">One Player</Nav.Link>
+                        <Nav.Link href="/MultiplayerLS">Two Player</Nav.Link>
+                    </Nav>
                 </Container>
             </Navbar>
         </>
