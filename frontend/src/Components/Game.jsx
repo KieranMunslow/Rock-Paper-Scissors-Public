@@ -12,7 +12,11 @@ const Game = props => {
         resultTitle = <h1>You {result}!</h1>
     } else {
         returnObj = { name1: player1, name2: player2 };
-        resultTitle = (result === "win") ? <h1>{player1} wins!</h1> : <h1>{player2} wins!</h1>
+        if (result === "draw") {
+            resultTitle = <h1>You draw!</h1>
+        } else {
+            resultTitle = (result === "win") ? <h1>{player1} wins!</h1> : <h1>{player2} wins!</h1>
+        }
     }
 
     return (
