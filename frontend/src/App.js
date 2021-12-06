@@ -16,21 +16,11 @@ function App() {
         <NavMenu />
 
         <Switch>
-
-          {/* <Route path="/SinglePlayer">
-            <SingleUserForm />
-          </Route> */}
           <Route path="/SinglePlayer" component={SingleUserForm} />
           <Route path="/SinglePlayerLS" component={SingleUserFormLS} />
           <Route path="/Multiplayer" component={MultiUserForm} />
           <Route path="/MultiplayerLS" component={MultiUserFormLS} />
-          {/* <MultiUserForm />
-          </Route> */}
-
           <Route path="/Game" component={Game} />
-          {/* <Game />
-          </Route> */}
-
         </Switch>
       </div>
     </Router>
